@@ -258,7 +258,6 @@ export default {
         // this.addForm.goods_cat = this.addForm.goods_cat.join(',')
         // 以上写法不对：级联选择器绑定的对象goods_cat要求是数组对象
         // 解决办法: 包：lodash 方法（深拷贝）：cloneDeep(boj)
-        console.log(this.addForm)
         // 将this.addForm进行深拷贝
         const form = _.cloneDeep(this.addForm)
         form.goods_cat = form.goods_cat.join(',')
@@ -282,7 +281,6 @@ export default {
         form.attrs = this.addForm.attrs
         // 发起请求添加商品
         // 商品名称必须是唯一的
-        console.log(form)
         const { data: res } = await this.$http.post('goods', form)
         if (res.meta.status !== 201) return this.$message.error('添加商品失败！')
         this.$message.success('添加商品成功!')
