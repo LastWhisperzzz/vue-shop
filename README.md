@@ -1,11 +1,4 @@
-
-
-
-
-
-
-##  电商后台管理系统(前端项目）  [预览](http://huangzun.top:8888/)
-### 后端API接口源码  [下载](https://gitee.com/wBekvam/vueShop-api-server.git).  [接口API](./api接口文档.md)
+## 电商后台管理系统(前端项目)
 
 ### 功能
 
@@ -13,14 +6,15 @@
 
 
 
-![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc01.png)
+![](./src/assets/mall_desc01.png)
+
 
 
 ### 开发模式
 
 > 电商后台管理系统整体采用前后端分离的开发模式,其中前端项目是基于Vue技术栈的SPA项目
 
-![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc02.png)
+![](./src/assets//mall_desc02.png)
 
 ### 技术选型
 
@@ -35,18 +29,10 @@
 #### 后端项目技术栈
 
 - Node.js
-
 - Express
-
 - Jwt
-
 - Mysql
-
 - Sequelize
-
-  ##### [接口API](./api接口文档.md).
-
-  后端源码  [下载](https://gitee.com/wBekvam/vueShop-api-server.git).
 
 ### 项目初始化
 
@@ -61,7 +47,7 @@
 
 ##### 相关依赖-按需导入
 
-![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc03.png)
+![](./src/assets//mall_desc03.png)
 
 #### 后端项目的环境安装配置
 
@@ -89,7 +75,7 @@
 3. 通过sesion在服务器端记录状态
 4. 通过token维持状态(不允许跨域使用)
 
-![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc04.png)
+![](./src/assets//mall_desc04.png)
 
 #### 登录业务流程
 
@@ -150,14 +136,13 @@ axios.interceptors.request.use(config => {
     return config
 })
 ```
-
 ### 权限管理
 
 #### 权限管理业务分析
 
 > 通过权限管理模块控制不同的用户可以进行哪些操作,具体可以通过角色的方式进行控制,即每个用户分配一个特定的角色,角色包括不同的功能权限
 
-![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc05.png)
+![](./src/assets//mall_desc05.png)
 
 
 
@@ -203,7 +188,6 @@ axios.interceptors.request.use(config => {
 ### 项目优化策略
 
 - 生成打包报告
-
   - 通过命令行参数形式生成报告=>vue-cli-service build --report
   - 通过可视化ui面板直接查看报告(通过控制台和分析面板)
 
@@ -274,43 +258,34 @@ axios.interceptors.request.use(config => {
   2. 步骤2
 
   > 在public/index.html文件头部,将main-prod中的已经进行配置的import(<code>样式表</code>)删除替换为cdn引入
-```css
-<link href="https://cdn.bootcss.com/viewerjs/1.3.7/viewer.min.css" rel="stylesheet">
+  >
+  > <link href="https://cdn.bootcss.com/viewerjs/1.3.7/viewer.min.css" rel="stylesheet">
+  >
+  > ​    <link href="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.bubble.min.css" rel="stylesheet">
+  >
+  > ​    <link href="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.core.min.css" rel="stylesheet">
+  >
+  > ​    <link href="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.snow.min.css" rel="stylesheet">
+  >
+  > ​    <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  >
+  > ​    <link href="https://cdn.bootcss.com/element-ui/2.12.0/theme-chalk/index.css" rel="stylesheet">
 
-<link href="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.bubble.min.css" rel="stylesheet">
-
-​<link href="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.core.min.css" rel="stylesheet">
-
-<link href="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.snow.min.css" rel="stylesheet">
-
-<link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-
-<link href="https://cdn.bootcss.com/element-ui/2.12.0/theme-chalk/index.css" rel="stylesheet">
-```
   3. 步骤3
 
   > 在public/index.html文件头部,将main-prod中的已经进行配置的import(<code>js文件</code>)删除替换为cdn引入
-```css
- <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
- 
- <script src="https://cdn.bootcss.com/vue-router/3.1.3/vue-router.min.js"></script>
+  >
+  > <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  > <script src="https://cdn.bootcss.com/vue-router/3.1.3/vue-router.min.js"></script>
+  > <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
+  > <script src="https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js"></script>
+  > <script src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts.min.js"></script>
+  > <script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  > <script src="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.min.js"></script>
+  > <script src="https://cdn.jsdelivr.net/npm/vue-quill-editor@3.0.4/dist/vue-quill-editor.js"></script>
+  > <script src="https://cdn.bootcss.com/viewerjs/1.3.7/viewer.min.js"></script>
+  > <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
 
-<script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
-
-<script src="https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js"></script>
-
-<script src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts.min.js"></script>
-
-<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-
-<script src="https://cdn.bootcss.com/quill/2.0.0-dev.3/quill.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/vue-quill-editor@3.0.4/dist/vue-quill-editor.js"></script>
-
-<script src="https://cdn.bootcss.com/viewerjs/1.3.7/viewer.min.js"></script>
-
-<script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
-```
   4. cdn加速前后对比( **chunk-vendors**打包文件)
 
   > Parsed大小 2.6m=> **596.9kB**
@@ -322,9 +297,9 @@ axios.interceptors.request.use(config => {
     > 1. 在main-prod.js中,注释掉element-ui按需加载的代码
     > 2. 在index.html头部区域中,通过cdn加载element-ui的js和css样式
     >
-    >	        `<link href="https://cdn.bootcss.com/element-ui/2.12.0/theme-chalk/index.css" rel="stylesheet">`
+    > <link href="https://cdn.bootcss.com/element-ui/2.12.0/theme-chalk/index.css" rel="stylesheet">
     >
-    > 	        `<script src="https://cdn.bootcss.com/element-ui/2.12.0/index.js"></script>`
+    > <script src="https://cdn.bootcss.com/element-ui/2.12.0/index.js"></script>
 
 - 首页内容定制
 
@@ -354,7 +329,6 @@ axios.interceptors.request.use(config => {
 - 路由懒加载
 
   > 在打包构建项目时,javascript包会变得特别大,影响页面加载,如果我们能把不同路由对应的组件分隔成不同的代码块,然后当路由被访问的时候才加载对应组件,这样更加高效
-
   - 安装@babel/plugin-syntax-dynamic-import包
   - 在babel.config.js配置文件声明该插件
   - 将路由改为按需加载形式
@@ -431,7 +405,7 @@ app.use(compression())
 6. pm2 delete 自定义名称 //删除项目
 ```
 
-![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc06.png)
+![](./src/assets//mall_desc06.png)
 
 
 
@@ -444,44 +418,3 @@ app.use(compression())
 [路由懒加载](https://router.vuejs.org/zh/guide/advanced/lazy-loading.html)
 
 [babel配置](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import/)
-
-
-
-
-### Project preview
-
-![welcome](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/welcome.png)
-
-
-![welcome](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/login.png)
-
-
-![user](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/user.png)
-
-
-
-![user1](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/user1.png)
-
-
-
-![role](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/role.png)
-
-
-
-![auth](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/auth.png)
-
-
-![goods](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/goods.png)
-
-
-![params](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/params.png)
-
-
-![addGoods](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/addGoods.png)
-
-
-![addGoods1](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/addGoods1.png)
-
-
-![data](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/data.png)
-
